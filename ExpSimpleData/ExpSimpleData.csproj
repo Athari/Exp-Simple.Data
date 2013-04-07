@@ -54,6 +54,20 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libs\Simple.Data\Simple.Data.Ado\Simple.Data.Ado.csproj">
+      <Project>{ecc2d7db-ec7f-44b6-b09f-5b471c629685}</Project>
+      <Name>Simple.Data.Ado</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\Simple.Data\Simple.Data.SqlCe40\Simple.Data.SqlCe40.csproj">
+      <Project>{43ba3d2c-10d8-470d-a60b-4f06d2f9d539}</Project>
+      <Name>Simple.Data.SqlCe40</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\Simple.Data\Simple.Data\Simple.Data.csproj">
+      <Project>{148CEE80-2E84-4ABD-B5AB-20415B2BBD21}</Project>
+      <Name>Simple.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(SolutionDir)\Build\Common.targets" Condition="Exists('$(SolutionDir)\Build\Common.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

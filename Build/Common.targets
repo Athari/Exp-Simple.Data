@@ -33,7 +33,7 @@
     </PropertyGroup>
 
     <!-- Get items from child projects first. -->
-    <!--<MSBuild
+    <MSBuild
         Projects="@(_MSBuildProjectReferenceExistent)"
         Targets="GetCopyToOutputDirectoryItems"
         BuildInParallel="$(BuildInParallel)"
@@ -44,7 +44,7 @@
 
       <Output TaskParameter="TargetOutputs" ItemName="_AllChildProjectItemsWithTargetPath"/>
 
-    </MSBuild>-->
+    </MSBuild>
 
     <!-- Target outputs must be full paths because they will be consumed by a different project. -->
     <ItemGroup>
