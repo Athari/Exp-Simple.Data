@@ -1,0 +1,3 @@
+[submodule "Libs/Simple.Data"]
+	path = Libs/Simple.Data
+	url = git@github.com:Athari/Simple.Data.git
