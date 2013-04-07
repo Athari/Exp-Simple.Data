@@ -31,11 +31,14 @@ namespace ExpSimpleData
             string connStr = new SqlCeConnectionStringBuilder { DataSource = DbFileName, FileMode = "Shared Read" }.ConnectionString;
             Connect(connStr);
 
-            Trace.Listeners.Add(new ConsoleTraceListener());
+            //Trace.Listeners.Add(new ConsoleTraceListener());
+            SimpleDataTraceSources.TraceSource.Listeners.Add(new ConsoleTraceListener());
 
             var db = Database.OpenConnection(connStr);
             db.Users.Insert(Name: "Athari", Avatar: "athari.jpg");
             Console.WriteLine(db.Users.FindByName("Athari").Avatar);
+
+            db.IDoNotExist.Insert(Id: 0);
         }
 
         private static void Connect (string connStr)
